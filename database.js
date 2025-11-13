@@ -1,4 +1,4 @@
-const notes = [
+let notes = [
     {
         id:1,
         title:"My first note",
@@ -13,10 +13,34 @@ const notes = [
     }
 ]
 
-function getNotes(){
-    return notes
+let currentid=3;
+
+
+function getNotes(searchContent){
+    if(!searchContent){
+        return notes
+    }
+    return notes.filter(note => note.title.includes(searchContent) || note.content.includes(searchContent))
 }
 
 function getNote(id){
     return notes.find((note) => note.id===id)
+}
+function addNote(note){
+    notes.push({
+        ...note,
+        id: currentid,
+        timestamp: Date.now()
+    })
+    currentid++;
+}
+function deleteNote(id){
+
+}
+
+module.exports = {
+    getNotes,
+    getNote,
+    addNote,
+    deleteNote
 }

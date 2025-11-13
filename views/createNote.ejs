@@ -7,16 +7,24 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <nav class="center">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/notes">Notes</a></li>
+            <li><a href="/createNote">Create Note</a></li>
+        </ul>
+    </nav>
     <header>
-        <h1 class="center">Create Note</h1>
+        <h1 style="color: aquamarine;" class="center">Create Note</h1>
     </header>
     <main class="center">
-        <form action="" class="center">
+        <form action="/notes" class="center" method="POST">
             <label for="title">Title:</label>
             <input type="text" id="title" placeholder="Title..." name="title">
             <br>
             <label for="content">Label: </label>
             <textarea name="content" id="content" placeholder="Note Content..." cols="30" rows="10"></textarea>
+            <button type="submit">Create Note</button>
         </form>
     </main>
 </body>

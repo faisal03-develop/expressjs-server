@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
 </head>
 <body>
     <nav class="center">
@@ -14,12 +13,7 @@
             <li><a href="/createNote">Create Note</a></li>
         </ul>
     </nav>
-    <h1>Note Page</h1>
-    <h1><%= note.title %></h1>
-    <p><%= note.content %></p>
-    <p><%= new Date(note.timestamp) %></p>
-    <form action="/notes/<%= note.id %>/delete" method="POST">
-        <button type="submit">Delete Note</button>
-    </form>
+    <h1>Note #: <%= note.id %></h1>
+    
 </body>
 </html>

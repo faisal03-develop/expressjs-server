@@ -6,14 +6,38 @@ body{
     color: azure;
     background-color: black;
 }
-
+nav ul{
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+nav a{
+    color: tomato; 
+    text-decoration: none;
+}
 .center{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 ul{
     list-style: none;
+}
+form label{
+    color: aquamarine;
+}
+form,input,textarea{
+    width: 30rem
+}
+button{
+    font-family: Orbitron;
+    background-color: black;
+    color: aquamarine;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: 2rem;
 }
