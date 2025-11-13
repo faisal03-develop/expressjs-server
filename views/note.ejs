@@ -14,12 +14,14 @@
             <li><a href="/createNote">Create Note</a></li>
         </ul>
     </nav>
-    <h1>Note Page</h1>
-    <h1><%= note.title %></h1>
-    <p><%= note.content %></p>
-    <p><%= new Date(note.timestamp) %></p>
-    <form action="/notes/<%= note.id %>/delete" method="POST">
-        <button type="submit">Delete Note</button>
-    </form>
+    <div style="margin-left: 20%; margin-right: 20%;" class="center">
+        <h1>Note Page</h1>
+        <h1><%= note.title %></h1>
+        <p><%= note.content %></p>
+        <p><%= new Date(note.timestamp) %></p>
+        <form class="center" action="/notes/<%= note.id %>/delete" method="POST">
+            <button type="submit">Delete Note</button>
+        </form>
+    </div>
 </body>
 </html>

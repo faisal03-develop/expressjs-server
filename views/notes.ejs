@@ -20,9 +20,9 @@
             <input type="text" name="searchContent" placeholder="Search Notes...">
             <button type="submit">Search</button>
         </form>
-        <ul>
+        <ul class="center">
         <% notes.forEach(note => { %>
-            <li><h1><%= note.title  %></h1>
+            <li class="center"><h1><%= note.title  %></h1>
             <p><%= note.content.substring(0,100)  %>...</p>
             <p><%= new Date(note.timestamp)  %></p>
             <a href="/notes/<%= note.id %>">View More...</a>
